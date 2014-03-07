@@ -2,7 +2,7 @@
 source .zsh_aliases
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/Dev/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in $ZSH/themes/
@@ -38,8 +38,5 @@ CASE_SENSITIVE="false"
 
 plugins=(git osx sublime)
 source $ZSH/oh-my-zsh.sh
-source $ZSH/custom/prompts/zsh-git-prompt/zshrc.sh
-PROMPT='%B%m%~%b $(git_super_status )⇀ ' #⇀⇰
+PROMPT='%B%m%~%b $⇀ ' #⇀⇰
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/andrewhazlett/.gvm/bin/gvm-init.sh" ]] && source "/Users/andrewhazlett/.gvm/bin/gvm-init.sh"
