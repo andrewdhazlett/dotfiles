@@ -40,3 +40,5 @@ plugins=(git osx sublime)
 source $ZSH/oh-my-zsh.sh
 PROMPT='%B%m%~%b $⇀ ' #⇀⇰
 
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
