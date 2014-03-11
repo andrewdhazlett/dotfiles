@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in $ZSH/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="miloshadzic"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="false"
@@ -38,7 +38,7 @@ CASE_SENSITIVE="false"
 
 plugins=(git osx sublime)
 source $ZSH/oh-my-zsh.sh
-PROMPT='%B%m%~%b $⇀ ' #⇀⇰
+# PROMPT='%B%m%~%b $⇀ ' #⇀⇰
 
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
