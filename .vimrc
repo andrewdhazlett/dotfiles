@@ -3,7 +3,7 @@ execute pathogen#infect( 'bundle/{}')
 
 " set up color scheme
 syntax on
-set background=dark
+set background=light
 colorscheme solarized
 
 filetype plugin indent on
@@ -17,3 +17,7 @@ set backspace=2
 " set up tabs
 set expandtab tabstop=2 shiftwidth=2 
 retab
+
+" set up word wrapping
+set tw=80
+set wrap
