@@ -1,5 +1,5 @@
 # Load my aliases
-source .zsh_aliases
+source ~/.zsh_aliases
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
