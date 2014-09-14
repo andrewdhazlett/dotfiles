@@ -1,0 +1,35 @@
+{
+  "name": "gitter",
+  "version": "0.6.1",
+  "description": "Gitter chat integration with Atom.io ",
+  "main": "lib/atom-gitter.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Glavin001/atom-gitter.git"
+  },
+  "author": {
+    "name": "Glavin Wiechert",
+    "url": "https://github.com/Glavin001",
+    "email": "glavin.wiechert@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Glavin001/atom-gitter/issues"
+  },
+  "homepage": "https://github.com/Glavin001/atom-gitter",
+  "dependencies": {
+    "github-url-from-git": "^1.1.1",
+    "request": "^2.34.0",
+    "lodash": "^2.4.1",
+    "atom-message-panel": "^1.0.0",
+    "node-gitter": "^1.2.1",
+    "emojify.js": "git+https://github.com/hassankhan/emojify.js.git",
+    "atom-logger": "^0.1.1"
+  },
+  "engines": {
+    "atom": ">=0.50.0"
+  }
+}

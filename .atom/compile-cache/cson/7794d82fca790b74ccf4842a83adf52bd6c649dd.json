@@ -1,0 +1,1 @@
+{"context-menu":{".overlayer":{"Enable tern":"tern:toggle"}},"menu":[{"label":"Packages","submenu":[{"label":"Tern","submenu":[{"label":"Start server","command":"tern:start-server"},{"label":"Stop server","command":"tern:stop-server"}]}]}]}
