@@ -20,4 +20,3 @@
   dump = cat-file -p
 [github]
 	user = andrewdhazlett
-	token = 46ead67a4743f720c387b29aa185a599da88b736

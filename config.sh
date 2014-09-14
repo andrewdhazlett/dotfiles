@@ -10,6 +10,9 @@ DIR=`git rev-parse --show-toplevel`;
 # set up links to submodule directories
 ln -s $DIR/.oh-my-zsh $DIR/.vim ~
 
+# set up links for config directories
+ln -s $DIR/.atom ~
+
 # set up links for config files
-ln -s $DIR/.zshrc $DIR/.zsh_aliases $DIR/.vimrc $DIR/.tmux.conf ~
+ln -s $DIR/git/.gitconfig $DIR/.zshrc $DIR/.zsh_aliases $DIR/.vimrc $DIR/.tmux.conf ~
 
