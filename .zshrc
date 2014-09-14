@@ -42,3 +42,5 @@ source $ZSH/oh-my-zsh.sh
 
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
