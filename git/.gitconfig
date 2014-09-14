@@ -1,0 +1,23 @@
+[user]
+	name = andrewdhazlett
+	email = andrew@hazlett.me
+[credential]
+	helper = store
+[credential "https://github.com"]
+	username = andrewdhazlett
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[alias]
+  a = add
+  ac = commit --amend -m
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[github]
+	user = andrewdhazlett
+	token = 46ead67a4743f720c387b29aa185a599da88b736
