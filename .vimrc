@@ -3,7 +3,7 @@ execute pathogen#infect( 'bundle/{}')
 
 " set up color scheme
 syntax on
-set background=light
+set background=dark
 colorscheme solarized
 
 filetype plugin indent on
