@@ -44,3 +44,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# prefer homebrew versions of programs over system versions
+export PATH=/usr/local/bin:$PATH
+# use homebrew install of php cli
+export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"
