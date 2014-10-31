@@ -1,2 +1,2 @@
-alias la=' ls -AFG ';
-alias cla=' clear; la ';
+# load my aliases
+source ~/.aliases
