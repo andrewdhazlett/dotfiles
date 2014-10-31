@@ -1,5 +1,17 @@
 alias c="clear; ";
-alias la="ls -AFG";
 alias cla="c la";
 alias cal="cla";
 alias cd..="cd ..";
+
+# os-specific aliases
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  alias la="ls -AFgo --group-directories-first"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias vi="open -a MacVim"
+  alias la="ls -AFGghlo"
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+elif [[ "$OSTYPE" == "msys" ]]; then
+elif [[ "$OSTYPE" == "win32" ]]; then
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+else
+fi
