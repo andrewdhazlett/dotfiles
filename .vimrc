@@ -21,3 +21,6 @@ retab
 " set up word wrapping
 set tw=80
 set wrap
+
+" set up gui
+set guifont=Monaco:h13
