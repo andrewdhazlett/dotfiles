@@ -16,3 +16,5 @@ ln -s $DIR/.oh-my-zsh $DIR/.vim ~
 # set up links for config files
 ln -s $DIR/git/.gitconfig $DIR/.zshrc $DIR/.zsh_aliases $DIR/.vimrc $DIR/.tmux.conf ~
 
+# npm install where necessary
+cd $DIR/.vim/bundle/tern_for_vim && npm i
