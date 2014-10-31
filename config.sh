@@ -11,7 +11,7 @@ DIR=`git rev-parse --show-toplevel`;
 ln -s $DIR/.oh-my-zsh $DIR/.vim ~
 
 # set up links for config directories
-ln -s $DIR/.atom ~
+# ln -s $DIR/.atom ~
 
 # set up links for config files
 ln -s $DIR/git/.gitconfig $DIR/.zshrc $DIR/.zsh_aliases $DIR/.vimrc $DIR/.tmux.conf ~
