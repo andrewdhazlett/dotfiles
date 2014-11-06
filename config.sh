@@ -35,4 +35,4 @@ ln -s $DIR/vim/.vimrc ~
 ln -s $DIR/zsh/.zshrc ~
 
 # npm install where necessary
-cd $DIR/.vim/bundle/tern_for_vim && npm i
+cd $DIR/vim/.vim/bundle/tern_for_vim && npm i

@@ -5,7 +5,7 @@ links=(
   .aliases
   .bashrc
 	.gitconfig
-	.oh-my-zsh
+	oh-my-zsh
 	.osx_aliases
 	.slate
 	.tmux.conf
