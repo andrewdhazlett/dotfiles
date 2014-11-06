@@ -10,7 +10,7 @@ OSX_DIR=$DIR'/osx'
 
 # set up links to submodule directories
 ln -s $DIR/vim/.vim ~
-ln -s $DIR/zsh/.oh-my-zsh ~
+ln -s $DIR/zsh/oh-my-zsh ~
 
 # os-specific config
 
