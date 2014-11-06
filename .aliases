@@ -5,10 +5,9 @@ alias cd..="cd ..";
 
 # os-specific aliases
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  alias la="ls -AFgo --group-directories-first"
+	source ./.linux_aliases
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  alias vi="open -a MacVim"
-  alias la="ls -AFGghlo"
+	source ~/.osx_aliases
 elif [[ "$OSTYPE" == "cygwin" ]]; then
 elif [[ "$OSTYPE" == "msys" ]]; then
 elif [[ "$OSTYPE" == "win32" ]]; then
