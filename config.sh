@@ -17,8 +17,7 @@ ln -s $DIR/zsh/oh-my-zsh ~
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	ln -s $DIR/.linux_aliases ~
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-	echo "it's OSX!"
-#	source $OSX_DIR/osx.sh
+	source $OSX_DIR/osx.sh
 # elif [[ "$OSTYPE" == "cygwin" ]]; then
 # elif [[ "$OSTYPE" == "msys" ]]; then
 # elif [[ "$OSTYPE" == "win32" ]]; then
