@@ -67,6 +67,7 @@ apps=(
 #  seil
 #  spotify
   vagrant
+	vagrant-manager
 #  arq
   flash
   iterm2
