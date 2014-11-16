@@ -26,3 +26,10 @@ set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 
 " set up gui
 set guifont=Monaco:h13
+
+" coffeescript setup
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+let coffee_compile_vert = 1
+let coffee_watch_vert = 1
+

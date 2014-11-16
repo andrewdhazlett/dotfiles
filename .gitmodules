@@ -32,3 +32,6 @@
 [submodule "osx/slate"]
 	path = osx/slate
 	url = https://github.com/jigish/slate.git
+[submodule "vim/.vim/bundle/vim-coffee-script"]
+	path = vim/.vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
