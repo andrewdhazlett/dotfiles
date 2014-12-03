@@ -28,6 +28,7 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 # install binaries
 binaries=(
+	ctags
   graphicsmagick
 #  webkit2png
   rename
