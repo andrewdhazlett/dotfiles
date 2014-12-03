@@ -10,7 +10,7 @@
 	smudge = git-media-smudge %f
 [alias]
   a = add
-  ac = commit --amend -m
+	ac = commit --amend
   co = checkout
   ci = commit
   st = status
@@ -18,5 +18,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+	po = push origin
+	ph = push origin HEAD
 [github]
 	user = andrewdhazlett
