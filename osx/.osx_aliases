@@ -1,2 +1,2 @@
-alias vim="open -a MacVim"
 alias la="ls -AFGghlo"
+alias vi="vim"

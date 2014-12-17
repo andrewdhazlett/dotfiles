@@ -28,7 +28,7 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 # install binaries
 binaries=(
-	ctags
+  ctags
   graphicsmagick
 #  webkit2png
   rename
@@ -40,8 +40,10 @@ binaries=(
   node
   tree
   ack
+  the_silver_searcher
 #  hub
   git
+  vim
 )
 
 echo "installing binaries..."
@@ -55,6 +57,7 @@ brew install caskroom/cask/brew-cask
 # Apps
 apps=(
   alfred
+  dash
   dropbox
   google-chrome
 #  qlcolorcode
@@ -68,7 +71,7 @@ apps=(
 #  seil
 #  spotify
   vagrant
-	vagrant-manager
+  vagrant-manager
 #  arq
   flash
   iterm2
