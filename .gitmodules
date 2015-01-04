@@ -1,9 +1,6 @@
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
-[submodule "slate"]
-	path = slate
-	url = https://github.com/jigish/slate.git
 [submodule "vim/.vim/bundle/tern_for_vim"]
 	path = vim/.vim/bundle/tern_for_vim
 	url = https://github.com/marijnh/tern_for_vim.git
