@@ -43,6 +43,7 @@ binaries=(
   the_silver_searcher
 #  hub
   git
+  git-extras
   vim
 )
 
