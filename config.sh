@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 # init and update git submodules
 git submodule update --init;
@@ -10,6 +10,10 @@ OSX_DIR=$DIR'/osx'
 # set up links to submodule directories
 ln -s $DIR/vim/.vim ~
 ln -s $DIR/zsh/prezto ~/.zprezto
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+	ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 
 # init prezto
 source $DIR/zsh/prezto/init.zsh

@@ -20,15 +20,9 @@
 	path = zsh/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 
-[submodule "zsh/oh-my-zsh"]
-	path = zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "osx/slate"]
-	path = osx/slate
-	url = https://github.com/jigish/slate.git
 [submodule "vim/.vim/bundle/vim-coffee-script"]
 	path = vim/.vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -53,9 +47,9 @@
 [submodule "vim/.vim/bundle/ag.vim"]
 	path = vim/.vim/bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
-[submodule "zsh/prezto"]
-	path = zsh/prezto
-	url = https://github.com/sorin-ionescu/prezto.git
 [submodule "powerline-fonts"]
 	path = powerline-fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "zsh/prezto"]
+	path = zsh/prezto
+	url = https://github.com/andrewdhazlett/prezto.git

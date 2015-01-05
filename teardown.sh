@@ -5,13 +5,13 @@ links=(
   .aliases
   .bashrc
 	.gitconfig
-	oh-my-zsh
 	.osx_aliases
 	.slate
 	.tmux.conf
 	.vim
 	.vimrc
 	.zshrc 
+	.zprezto
 )
 
 cd ~/ && echo "removing ${links[@]}" && rm ${links[@]}
