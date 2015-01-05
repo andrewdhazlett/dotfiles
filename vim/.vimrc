@@ -16,6 +16,8 @@ set history=1000 undolevels=1000
 set title
 set visualbell noerrorbells
 set number relativenumber
+set cursorline
+set autowrite
 
 
 " non-sucky autocomplete
@@ -28,10 +30,20 @@ set splitbelow splitright
 " set up tabs
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 
-" key remappings
+" leader mappings
 let mapleader=","
-"		tab to autocomplete
-inoremap <Tab> <C-n>
+"   edit .vimrc
+nnoremap <Leader>e. :vsplit $MYVIMRC<CR>
+inoremap <Leader>e. <Esc>:vsplit $MYVIMRC<CR>i
+"   source .vimrc
+nnoremap <Leader>s. :source $MYVIMRC<CR>
+inoremap <Leader>s. <Esc>:source $MYVIMRC<CR>i
+
+" key mappings
+"	  autocomplete
+inoremap <C-Space> <C-n>
+"   delete line
+inoremap <C-d> <Esc>ddi
 "   semicolons are worthless in normal mode
 nnoremap ; :
 "   navigate wrapped lines
@@ -44,6 +56,33 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+"		insert mode nav
+inoremap <C-h> <left>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-l> <right>
+"   no arrows allowed
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+
+" plugin remappings
+"   eclipse-style unimpaired bubbling
+"     bubble single lines
+nmap <Esc>k [e
+nmap <Esc>j ]e
+"     bubble multiple lines
+vmap <Esc>k [egv
+vmap <Esc>j ]egv
 
 " airline options
 let g:airline_powerline_fonts = 1
