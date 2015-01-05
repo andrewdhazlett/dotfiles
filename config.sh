@@ -1,8 +1,7 @@
 #! /bin/bash
 
 # init and update git submodules
-git submodule init;
-git submodule update;
+git submodule update --init;
 
 # get the directory where the repo was cloned 
 DIR=`git rev-parse --show-toplevel`;
@@ -10,7 +9,12 @@ OSX_DIR=$DIR'/osx'
 
 # set up links to submodule directories
 ln -s $DIR/vim/.vim ~
-ln -s $DIR/zsh/oh-my-zsh ~
+ln -s $DIR/zsh/prezto ~/.zprezto
+
+# init prezto
+source $DIR/zsh/prezto/init.zsh
+# init powerline fonts
+source $DIR/powerline-fonts/install.sh
 
 # os-specific config
 
