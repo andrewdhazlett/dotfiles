@@ -11,14 +11,15 @@
 [alias]
   a = add
 	ac = commit --amend
-  co = checkout
-  ci = commit
-  st = status
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
+  ci = commit
+  co = checkout
+	di = diff
   dump = cat-file -p
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	po = push origin
-	ph = push origin HEAD
+	ph = push -u origin HEAD
+  st = status
+  type = cat-file -t
 [github]
 	user = andrewdhazlett

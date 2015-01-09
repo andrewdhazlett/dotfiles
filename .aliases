@@ -2,6 +2,7 @@ alias c="clear; ";
 alias cla="c la";
 alias cal="cla";
 alias cd..="cd ..";
+alias gi="git";
 
 # os-specific aliases
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
