@@ -19,6 +19,7 @@ echo 'VIM: build YouCompleteMe'
 # see https://github.com/Valloric/YouCompleteMe#full-installation-guide
 YCM_BUILD_DIR=$VIM_DIR'/ycm_build'
 YCM_DIR=$PATHOGEN_DIR'/YouCompleteMe'
+mkdir YCM_BUILD_DIR
 cmake -G "Unix Makefiles" $YCM_BUILD_DIR $YCM_DIR/third_party/ycmd/cpp
 
 # TODO: refactor
@@ -26,7 +27,8 @@ cd $YCM_BUILD_DIR
 make ycm_support_libs
 
 echo 'VIM: symlink to home dir'
-ln -s $DIR/vim/* ~
+ln -s $DIR/vim/.vimrc ~
+ln -s $DIR/vim/.vim ~
 
 # return to OLD_DIR
 cd $OLD_DIR

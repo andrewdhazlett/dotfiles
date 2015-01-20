@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 echo 'set up links to submodule directories'
 ln -s $DIR/zsh/prezto ~/.zprezto
 setopt EXTENDED_GLOB
