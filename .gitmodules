@@ -50,9 +50,6 @@
 [submodule "powerline-fonts"]
 	path = powerline-fonts
 	url = https://github.com/powerline/fonts.git
-[submodule "zsh/prezto"]
-	path = zsh/prezto
-	url = https://github.com/andrewdhazlett/prezto.git
 [submodule "vim/.vim/bundle/ultisnips"]
 	path = vim/.vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
@@ -65,3 +62,10 @@
 [submodule "vim/.vim/bundle/YouCompleteMe"]
 	path = vim/.vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/.vim/bundle/supertab"]
+	path = vim/.vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+
+[submodule "zsh/.zprezto"]
+	path = zsh/.zprezto
+	url = https://github.com/andrewdhazlett/prezto.git
