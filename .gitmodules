@@ -62,10 +62,6 @@
 [submodule "vim/.vim/bundle/YouCompleteMe"]
 	path = vim/.vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "vim/.vim/bundle/supertab"]
-	path = vim/.vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-
 [submodule "zsh/.zprezto"]
 	path = zsh/.zprezto
 	url = https://github.com/andrewdhazlett/prezto.git
