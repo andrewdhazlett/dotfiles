@@ -53,3 +53,15 @@
 [submodule "zsh/prezto"]
 	path = zsh/prezto
 	url = https://github.com/andrewdhazlett/prezto.git
+[submodule "vim/.vim/bundle/ultisnips"]
+	path = vim/.vim/bundle/ultisnips
+	url = git://github.com/SirVer/ultisnips.git
+[submodule "vim/.vim/bundle/vim-snippets"]
+	path = vim/.vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/.vim/bundle/vim-exchange"]
+	path = vim/.vim/bundle/vim-exchange
+	url = https://github.com/tommcdo/vim-exchange.git
+[submodule "vim/.vim/bundle/YouCompleteMe"]
+	path = vim/.vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

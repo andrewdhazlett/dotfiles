@@ -1,7 +1,7 @@
 #! /bin/sh
 
 echo 'init and update git submodules'
-git submodule update --init;
+git submodule update --init --recursive
 
 echo 'get the directory where the repo was cloned'
 DIR=`git rev-parse --show-toplevel`

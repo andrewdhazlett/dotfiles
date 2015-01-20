@@ -76,13 +76,22 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 
 " plugin remappings
-"   eclipse-style unimpaired bubbling
+"   unimpaired
 "     bubble single lines
 nmap <Esc>k [e
 nmap <Esc>j ]e
 "     bubble multiple lines
 vmap <Esc>k [egv
 vmap <Esc>j ]egv
+"		UltiSnips
+"			tab between triggers
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+"   UltiSnips/YCM/SuperTab song and dance
+"			TODO: make YCM expand snippets on completion
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 
 " airline options
 let g:airline_powerline_fonts = 1
@@ -106,9 +115,8 @@ let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 " set tw=80
 " set wrap
 
-" coffeescript setup
+" coffeescript options
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 let coffee_compile_vert = 1
 let coffee_watch_vert = 1
-

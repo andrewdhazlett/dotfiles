@@ -1,0 +1,9 @@
+snippet cl
+console.log $0
+endsnippet
+
+snippet cb
+(err, res) ->
+	if err? then console.error err
+	$1
+endsnippet
