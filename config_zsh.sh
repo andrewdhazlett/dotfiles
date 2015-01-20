@@ -1,4 +1,7 @@
 #! /bin/zsh
+
+DIR=`git rev-parse --show-toplevel`
+
 echo 'set up links to submodule directories'
 ln -s $DIR/zsh/.zprezto ~
 

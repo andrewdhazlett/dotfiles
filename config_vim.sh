@@ -1,6 +1,7 @@
 #! /bin/sh
 # TODO: differentiate 'full' and 'light' configs
 
+DIR=`git rev-parse --show-toplevel`
 OLD_DIR=`pwd`
 VIM_DIR=$DIR'/vim'
 PATHOGEN_DIR=$VIM_DIR'/.vim/bundle'
@@ -27,8 +28,8 @@ cd $YCM_BUILD_DIR
 make ycm_support_libs
 
 echo 'VIM: symlink to home dir'
-ln -s $DIR/vim/.vimrc ~
-ln -s $DIR/vim/.vim ~
+ln -s $VIM_DIR/.vimrc ~
+ln -s $VIM_DIR/.vim ~
 
 # return to OLD_DIR
 cd $OLD_DIR
