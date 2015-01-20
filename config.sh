@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 echo 'init and update git submodules'
 git submodule update --init --recursive
@@ -6,6 +6,7 @@ git submodule update --init --recursive
 echo 'get the directory where the repo was cloned'
 DIR=`git rev-parse --show-toplevel`
 OSX_DIR=$DIR'/osx'
+LINUX_DIR=$DIR'/linux'
 
 echo 'init powerline fonts'
 source $DIR/powerline-fonts/install.sh
@@ -14,6 +15,7 @@ echo 'os-specific config'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	ln -s $DIR/.linux_aliases ~
+	source $LINUX_DIR/linux.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	source $OSX_DIR/osx.sh
 # elif [[ "$OSTYPE" == "cygwin" ]]; then
