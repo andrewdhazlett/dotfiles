@@ -14,7 +14,7 @@ source ~/.aliases
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
 	# prefer homebrew versions of programs over system versions
 	export PATH=/usr/local/bin:$PATH
 	# use homebrew install of php cli
