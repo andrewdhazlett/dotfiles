@@ -1,3 +1,5 @@
+#! /bin/zsh
+
 alias c="clear; ";
 alias cla="c la";
 alias cal="cla";
@@ -6,12 +8,7 @@ alias gi="git";
 
 # os-specific aliases
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-	source ./.linux_aliases
+	source ~/.linux_aliases
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	source ~/.osx_aliases
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-elif [[ "$OSTYPE" == "msys" ]]; then
-elif [[ "$OSTYPE" == "win32" ]]; then
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
-else
 fi

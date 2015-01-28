@@ -11,31 +11,26 @@ LINUX_DIR=$DIR'/linux'
 echo 'init powerline fonts'
 source $DIR/powerline-fonts/install.sh
 
+echo ''
 echo 'os-specific config'
-
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-	ln -s $DIR/.linux_aliases ~
+	ln -s $DIR/linux/.linux_aliases ~
 	source $LINUX_DIR/linux.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	source $OSX_DIR/osx.sh
-# elif [[ "$OSTYPE" == "cygwin" ]]; then
-# elif [[ "$OSTYPE" == "msys" ]]; then
-# elif [[ "$OSTYPE" == "win32" ]]; then
-# elif [[ "$OSTYPE" == "freebsd"* ]]; then
-# else
 fi
 
+echo ''
 echo 'set up vim'
-source $DIR/vimrc/config_vim.sh
+cd $DIR/vimrc && $DIR/vimrc/install.sh
+
+echo ''
 echo 'set up zsh'
-source $DIR/config_zsh.sh
+cd $DIR/zsh && $DIR/config_zsh.sh
 
 echo 'set up links for config files'
-ln -s $DIR/.aliases ~
-ln -s $DIR/.bashrc ~
 ln -s $DIR/git/.gitconfig ~
 ln -s $DIR/.tmux.conf ~
-#ln -s $DIR/zsh/.zshrc ~
 
 echo 'npm install where necessary'
 cd $DIR/vim/.vim/bundle/tern_for_vim && npm i

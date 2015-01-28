@@ -8,11 +8,16 @@ links=(
 	.osx_aliases
 	.slate
 	.tmux.conf
-	.vim
-	.vimrc
-	.zshrc 
-	.zprezto
 )
 
 cd ~/ && echo "removing ${links[@]}" && rm ${links[@]}
 
+DIR=`git rev-parse --show-toplevel`
+
+echo ''
+echo 'uninstall up vimrc'
+cd $DIR/vimrc && $DIR/vimrc/uninstall.sh
+
+echo ''
+echo 'uninstall up zshrc'
+cd $DIR/zsh && $DIR/zsh/uninstall.sh
