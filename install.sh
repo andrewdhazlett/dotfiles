@@ -26,7 +26,7 @@ cd $DIR/vimrc && $DIR/vimrc/install.sh
 
 echo ''
 echo 'set up zsh'
-cd $DIR/zsh && $DIR/config_zsh.sh
+cd $DIR/zsh && $DIR/zsh/install.sh
 
 echo 'set up links for config files'
 ln -s $DIR/git/.gitconfig ~
