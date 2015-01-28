@@ -26,7 +26,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 echo 'set up vim'
-source $DIR/config_vim.sh
+source $DIR/vimrc/config_vim.sh
 echo 'set up zsh'
 source $DIR/config_zsh.sh
 

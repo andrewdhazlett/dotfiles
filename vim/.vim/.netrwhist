@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/ah/Dev/src/zs-api/static/resttest2'
-let g:netrw_dirhist_2='/Users/ah/Dev/src/zs-api/node_modules/zs-api-router'
-let g:netrw_dirhist_3='/Users/ah/Dev/src/zs-api/node_modules/zs-api-router/lib'
-let g:netrw_dirhist_4='/Users/ah/Dev/src/zs-api/lib'
-let g:netrw_dirhist_5='/Users/ah/Dev/src/zs-api'
-let g:netrw_dirhist_6='/Users/ah/Dev/src/mobileplatform/cron/jobs/GrabMarcosDesktop'
