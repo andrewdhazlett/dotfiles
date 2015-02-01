@@ -1,7 +1,6 @@
 #! /bin/zsh
 
-DIR=`pwd`
-ZSH_DIR=$DIR'/zsh'
+ZSH_DIR=`pwd`
 
 echo ''
 echo 'set up links to submodule directories'
