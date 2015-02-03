@@ -15,8 +15,10 @@ echo ''
 echo 'os-specific config'
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	ln -s $DIR/linux/.linux_aliases ~
+	ln -s $DIR/linux/.tmux.conf.linux ~/.tmux.conf.local
 	source $LINUX_DIR/linux.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+	ln -s $OSX_DIR/.tmux.conf.osx ~/.tmux.conf.local
 	source $OSX_DIR/osx.sh
 fi
 
