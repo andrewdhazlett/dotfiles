@@ -32,7 +32,11 @@ cd $DIR/zsh && $DIR/zsh/install.sh
 
 echo 'set up links for config files'
 ln -s $DIR/git/.gitconfig ~
+ln -s $DIR/.npmrc ~
 ln -s $DIR/.tmux.conf ~
+
+echo 'update npm'
+npm install -g npm@latest
 
 echo 'npm install where necessary'
 cd $DIR/vim/.vim/bundle/tern_for_vim && npm i
