@@ -5,6 +5,7 @@ alias cla="c la";
 alias cal="cla";
 alias cd..="cd ..";
 alias gi="git";
+alias rst-up="curl -s https://static.rust-lang.org/rustup.sh | sudo sh";
 
 # os-specific aliases
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
