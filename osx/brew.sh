@@ -1,7 +1,5 @@
 #! /bin/bash
 
-
-
 # Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
   echo "Installing homebrew..."
@@ -19,6 +17,9 @@ brew install findutils
 
 # Install Bash 4
 brew install bash
+
+# Install Vim how I like it
+brew install vim --override-system-vi --with-lua --with-luajit
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
@@ -44,7 +45,6 @@ binaries=(
 #  hub
   git
   git-extras
-  vim
 )
 
 echo "installing binaries..."
