@@ -13,6 +13,7 @@
 	ac = commit --amend
   br = branch
   ci = commit
+	cm = commit -m
   co = checkout
 	di = diff
   dump = cat-file -p
