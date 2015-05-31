@@ -23,3 +23,5 @@
   type = cat-file -t
 [github]
 	user = andrewdhazlett
+[core]
+	editor = /usr/local/bin/vim
