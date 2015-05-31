@@ -45,6 +45,7 @@ binaries=(
 #  hub
   git
   git-extras
+  gpg
 )
 
 echo "installing binaries..."
