@@ -26,6 +26,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 echo ''
+echo 'set up node'
+cd $DIR/node && $DIR/node/install.sh
+
+echo ''
 echo 'set up tmux'
 cd $DIR/tmuxconf && $DIR/tmuxconf/install.sh
 
