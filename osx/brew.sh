@@ -29,6 +29,7 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 # install binaries
 binaries=(
+  go --cross-compile-common
   ctags
   graphicsmagick
 #  webkit2png
@@ -58,6 +59,7 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
+  macvim --HEAD
   alfred
   dash
   dropbox
