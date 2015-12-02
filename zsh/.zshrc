@@ -12,8 +12,6 @@ fi
 
 source ~/.aliases
 
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	# prefer homebrew versions of programs over system versions
 	export PATH=/usr/local/bin:$PATH
