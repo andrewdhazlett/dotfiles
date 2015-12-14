@@ -26,8 +26,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH=/usr/local/bin:$PATH
 	# use homebrew go binary
 	PATH+=":/usr/local/opt/go/libexec/bin"
-	# use homebrew install of php cli
-	export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"
 fi
 
 # add globally installed node modules to $PATH
