@@ -23,7 +23,7 @@ fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	# prefer homebrew versions of programs over system versions
-	export PATH=/usr/local/bin:$PATH
+	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 	# use homebrew go binary
 	PATH+=":/usr/local/opt/go/libexec/bin"
 fi
