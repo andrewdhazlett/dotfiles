@@ -47,6 +47,7 @@ binaries=(
   git
   git-extras
   gpg
+  tmux
 )
 
 echo "installing binaries..."
@@ -59,42 +60,40 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
-  macvim --HEAD
+  1password
   alfred
   dash
+  disk-inventory-x
   dropbox
-  google-chrome
-#  qlcolorcode
-#  screenflick
-#  slack
-#  transmit
-#  appcleaner
   firefox
-#  hazel
-#  qlmarkdown
-#  seil
-#  spotify
+  flash
+  flux
+  google-chrome
+  harvest
+  iterm2
+  macvim --HEAD
+  qlcolorcode
+  qlmarkdown
+  qlprettypatch
+  qlstephen
+  quicklook-json
+  sketch
+  slack
+  transmission
   vagrant
   vagrant-manager
-#  arq
-  flash
-  iterm2
-#  qlprettypatch
-#  shiori
-#  sublime-text3
   virtualbox
-#  atom
-  flux
-  mailbox
-#  qlstephen
-#  sketch
-#  tower
   vlc
+#  tower
 #  cloudup
 #  nvalt
-#  quicklook-json
 #  skype
-  transmission
+#  screenflick
+#  transmit
+#  appcleaner
+#  seil
+#  spotify
+#  arq
 )
 
 # Install apps to /Applications
