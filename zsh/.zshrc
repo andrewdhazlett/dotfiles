@@ -15,7 +15,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	alias la="ls -AFgo --group-directories-first"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias la="ls -AFGghlo"
-	alias vi="vim"
+	alias vi="nvim"
 fi
 
 
@@ -29,10 +29,14 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # add globally installed node modules to $PATH
-PATH+=":`npm prefix --global`/bin"
+PATH="`npm prefix --global`/bin:"$PATH
 
 # add go binaries
 PATH+=":$GOPATH/bin"
 
 # environment variables:
 GOPATH="$HOME/code/go"
+
+# base-16 shell
+BASE16="$HOME/.vim/bundle/vim-hybrid-material/base16-material/base16-material.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL

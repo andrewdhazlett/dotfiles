@@ -1,6 +1,6 @@
 [user]
-	name = andrewdhazlett
-	email = andrew@hazlett.me
+	name = Andrew Hazlett
+	email = andrew.hazlett@zipscene.com
 [credential]
 	helper = store
 [credential "https://github.com"]
