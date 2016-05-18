@@ -15,7 +15,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	alias la="ls -AFgo --group-directories-first"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias la="ls -AFGghlo"
-	alias vi="vim"
+	alias vi="nvim"
 fi
 
 
