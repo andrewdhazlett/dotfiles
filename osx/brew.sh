@@ -29,25 +29,27 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 # install binaries
 binaries=(
-  go --cross-compile-common
-  ctags
-  graphicsmagick
-#  webkit2png
-  rename
-#  zopfli
-#  ffmpeg
-#  python
-#  sshfs
-  trash
-  node
-  tree
   ack
-  the_silver_searcher
-#  hub
+  ctags
   git
   git-extras
+  go --cross-compile-common
+  gnu-sed --with-default-names
   gpg
+  graphicsmagick
+  node
+  rename
+  the_silver_searcher
   tmux
+  trash
+  tree
+  zsh
+#  ffmpeg
+#  hub
+#  python
+#  sshfs
+#  webkit2png
+#  zopfli
 )
 
 echo "installing binaries..."
