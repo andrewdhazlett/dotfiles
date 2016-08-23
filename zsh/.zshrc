@@ -11,11 +11,15 @@ alias cal="cla";
 alias cd..="cd ..";
 alias gi="git";
 
+# enable true color for nvim
+alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias vi='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	alias la="ls -AFgo --group-directories-first"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias la="ls -AFGghlo"
-	alias vi="nvim"
 fi
 
 
