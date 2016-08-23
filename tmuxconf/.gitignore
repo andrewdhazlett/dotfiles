@@ -1,1 +1,2 @@
-.tmux/plugins/tpm
+.tmux/tmux-plugins/tpm
+.tmux/resurrect
