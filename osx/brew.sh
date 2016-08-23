@@ -40,7 +40,7 @@ binaries=(
   node
   rename
   the_silver_searcher
-  tmux
+  https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb
   trash
   tree
   zsh
