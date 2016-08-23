@@ -38,6 +38,7 @@ binaries=(
   gpg
   graphicsmagick
   node
+  python3
   rename
   the_silver_searcher
   https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb
