@@ -10,6 +10,7 @@ alias cla="c la";
 alias cal="cla";
 alias cd..="cd ..";
 alias gi="git";
+alias g="git";
 
 # enable true color for nvim
 alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
