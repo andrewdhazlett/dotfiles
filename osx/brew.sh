@@ -37,6 +37,7 @@ binaries=(
   gnu-sed --with-default-names
   gpg
   graphicsmagick
+  nginx
   node
   python3
   rename
