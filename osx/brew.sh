@@ -21,9 +21,9 @@ brew install bash
 # Install Vim how I like it
 brew install vim --override-system-vi --with-lua --with-luajit
 
-# Install more recent versions of some OS X tools
+# Tap some taps
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+brew tap homebrew/nginx
 
 $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
@@ -31,13 +31,15 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 binaries=(
   ack
   ctags
+  ffmpeg
   git
   git-extras
   go --cross-compile-common
   gnu-sed --with-default-names
   gpg
   graphicsmagick
-  nginx
+  homebrew/dupes/grep
+  nginx-full
   node
   python3
   rename
@@ -46,7 +48,6 @@ binaries=(
   trash
   tree
   zsh
-#  ffmpeg
 #  hub
 #  python
 #  sshfs
