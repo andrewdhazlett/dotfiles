@@ -1,0 +1,3 @@
+(defconst config-packages
+  '(editorconfig
+    ))
