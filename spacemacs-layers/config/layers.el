@@ -8,4 +8,5 @@
                                       markdown
                                       spell-checking
                                       syntax-checking
+                                      themes-megapack
                                       version-control))
