@@ -6,6 +6,7 @@
                                       html
                                       javascript
                                       markdown
+                                      perspectives
                                       spell-checking
                                       syntax-checking
                                       themes-megapack
