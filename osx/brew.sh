@@ -6,77 +6,59 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Update homebrew recipes
-brew update
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
-# Install Vim how I like it
-brew install vim --override-system-vi --with-lua --with-luajit
-
-# Tap some taps
-brew tap homebrew/dupes
-brew tap homebrew/nginx
-
-$PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-
 # install binaries
 binaries=(
   ack
+  bash
+  coreutils
   ctags
+  docker-compose
   ffmpeg
+  findutils
   git
   git-extras
-  go --cross-compile-common
-  gnu-sed --with-default-names
+  go
+  gnu-sed
   gpg
   graphicsmagick
-  homebrew/dupes/grep
-  nginx-full
-  node
+  grep
+  neovim
+  nginx
+  node@12
   python3
   rename
+  stow
+  svn
   the_silver_searcher
-  https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb
+  tmux
   trash
   tree
   zsh
-#  hub
-#  python
+  hub
+  python
 #  sshfs
 #  webkit2png
 #  zopfli
 )
 
+echo
 echo "installing binaries..."
+echo
+echo
 brew install ${binaries[@]}
-
-brew cleanup
-
-# install gui apps
-brew install caskroom/cask/brew-cask
+brew upgrade ${binaries[@]}
 
 # Apps
 apps=(
   1password
-  alfred
+  alacritty
   dash
-  disk-inventory-x
-  dropbox
-  firefox
-  flash
-  flux
-  google-chrome
-  harvest
+  docker
+  evernote
+  fantastical
+  firefox-developer-edition
   iterm2
-  macvim --HEAD
+  nvalt
   qlcolorcode
   qlmarkdown
   qlprettypatch
@@ -85,13 +67,9 @@ apps=(
   sketch
   slack
   transmission
-  vagrant
-  vagrant-manager
-  virtualbox
   vlc
 #  tower
 #  cloudup
-#  nvalt
 #  skype
 #  screenflick
 #  transmit
@@ -103,20 +81,34 @@ apps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
+echo
 echo "installing apps..."
+echo
+echo
 brew cask install --appdir="/Applications" ${apps[@]}
-brew cask alfred link
+brew upgrade --cask ${apps[@]}
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 # fonts
 fonts=(
-  font-m-plus
+  font-mplus
   font-clear-sans
   font-roboto
 )
 
 # install fonts
+echo
 echo "installing fonts..."
+echo
+echo
 brew cask install ${fonts[@]}
+brew upgrade --cask ${fonts[@]}
 
+# clean up
+echo
+echo "cleaning up..."
+echo
+echo
+brew cleanup
+brew doctor
