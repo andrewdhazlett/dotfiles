@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # enable true color for nvim
-export NVIM_TUI_ENABLE_TRUE_COLOR="1"
+# export NVIM_TUI_ENABLE_TRUE_COLOR="1"
 
 export PATH='/usr/local/bin:'$PATH
 export PATH='/usr/local/sbin:'$PATH
@@ -12,7 +12,5 @@ export PATH="/usr/local/opt/python@3/bin:$PATH"
 export PATH="/usr/local/opt/python@2/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/Library/Python/3.6/bin:$PATH"
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="`npm bin -g`:"$PATH
