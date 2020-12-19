@@ -5,9 +5,6 @@ fi
 
 # enable true color for nvim
 export NVIM_TUI_ENABLE_TRUE_COLOR="1"
-alias nvim='PYENV_ROOT=~/.pyenv \
-            VIMRUNTIME=~/git/github.com/neovim/neovim/runtime \
-            /usr/local/Cellar/neovim/0.4.3/bin/nvim'
 
 export PATH='/usr/local/bin:'$PATH
 export PATH='/usr/local/sbin:'$PATH
