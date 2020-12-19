@@ -8,6 +8,3 @@
 [submodule "zsh/.zprezto"]
 	path = zsh/.zprezto
 	url = https://github.com/andrewdhazlett/prezto.git
-[submodule "tmuxconf/tmux-colors-solarized"]
-	path = tmuxconf/tmux-colors-solarized
-	url = https://github.com/seebi/tmux-colors-solarized.git
