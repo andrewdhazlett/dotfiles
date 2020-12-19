@@ -8,9 +8,6 @@
 [submodule "zsh/.zprezto"]
 	path = zsh/.zprezto
 	url = https://github.com/andrewdhazlett/prezto.git
-[submodule "vimrc"]
-	path = vimrc
-	url = https://github.com/andrewdhazlett/vimrc
 [submodule "tmuxconf/tmux-colors-solarized"]
 	path = tmuxconf/tmux-colors-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git

@@ -36,10 +36,6 @@ echo 'set up tmux'
 cd $DIR/tmuxconf && $DIR/tmuxconf/install.sh
 
 echo ''
-echo 'set up vim'
-cd $DIR/vimrc && $DIR/vimrc/install.sh
-
-echo ''
 echo 'set up zsh'
 cd $DIR/zsh && $DIR/zsh/install.sh
 
