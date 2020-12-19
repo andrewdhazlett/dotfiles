@@ -19,4 +19,14 @@ cd $DIR/vimrc && $DIR/vimrc/uninstall.sh
 
 echo ''
 echo 'uninstall up zshrc'
-cd $DIR/zsh && $DIR/zsh/uninstall.sh
+# todo: make sure everything is links first and safely move real files somewhere
+links=(
+	.zlogin
+	.zlogout
+	.zprezto
+	.zpreztorc
+	.zprofile
+	.zshrc 
+)
+
+echo "removing ${links[@]}" && rm ~/${links[@]}

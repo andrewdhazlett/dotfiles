@@ -37,7 +37,15 @@ cd $DIR/tmuxconf && $DIR/tmuxconf/install.sh
 
 echo ''
 echo 'set up zsh'
-cd $DIR/zsh && $DIR/zsh/install.sh
+ZSH_DIR=`pwd`/zsh
+# link prezto
+ln -s $ZSH_DIR/.zprezto ~
+# link internal prezto conf
+ln -s $ZSH_DIR/.zprezto/runcoms/zlogin ~/.zlogin
+ln -s $ZSH_DIR/.zprezto/runcoms/zprofile ~/.zprofile
+# link custom config
+ln -s $ZSH_DIR/.zpreztorc ~
+ln -s $ZSH_DIR/.zshrc ~
 
 echo ''
 echo 'set up links for config files'
