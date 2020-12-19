@@ -2,12 +2,12 @@
 # see dotfiles/config.sh
 
 echo ""
-echo "Link OSX-specific config"
-ln -s $OSX_DIR/.osx_aliases $OSX_DIR/.slate ~
+echo "Link MACOS-specific config"
+ln -s $MACOS_DIR/.macos_aliases $MACOS_DIR/.slate ~
 
 echo ""
 #echo "doing brew stuff"
-#source $OSX_DIR/brew.sh
+#source $MACOS_DIR/brew.sh
 
 # we'll need sudo permissions for a lot of this
 sudo -v

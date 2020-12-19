@@ -8,7 +8,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	ln -s $LINUX_DIR/.tmux.conf.linux ~/.tmux.conf.local
 	source $LINUX_DIR/linux.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-	OSX_DIR=$DIR'/osx'
-	ln -s $OSX_DIR/.tmux.conf.osx ~/.tmux.conf.local
-	source $OSX_DIR/osx.sh
+	MACOS_DIR=$DIR'/macos'
+	ln -s $MACOS_DIR/.tmux.conf.macos ~/.tmux.conf.local
+	source $MACOS_DIR/macos.sh
 fi
