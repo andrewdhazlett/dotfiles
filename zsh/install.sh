@@ -3,10 +3,6 @@
 ZSH_DIR=`pwd`
 
 echo ''
-echo 'clone prezto'
-git clone --recursive https://github.com/sorin-ionescu/prezto.git .zprezto
-
-echo ''
 echo 'set up zsh links'
 # link prezto
 ln -s $ZSH_DIR/.zprezto ~
