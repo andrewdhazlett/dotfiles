@@ -23,7 +23,13 @@ fi
 
 echo 'set up node'
 echo ''
-cd $DIR/node && $DIR/node/install.sh
+rm $HOME/.npmrc
+ln -s $DIR/.npmrc $HOME/.npmrc
+mkdir $HOME/npm
+
+echo ''
+echo 'update npm'
+npm install -g npm@latest
 
 echo ''
 echo 'set up tmux'
