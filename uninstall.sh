@@ -6,7 +6,6 @@ links=(
   .bashrc
 	.gitconfig
 	.macos_aliases
-	.slate
 	.tmux.conf
 )
 
