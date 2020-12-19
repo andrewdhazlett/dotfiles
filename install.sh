@@ -33,7 +33,9 @@ npm install -g npm@latest
 
 echo ''
 echo 'set up tmux'
-cd $DIR/tmuxconf && $DIR/tmuxconf/install.sh
+TMUX_DIR=`pwd`/tmuxconf
+ln -s $TMUX_DIR/.tmux.conf ~
+ln -s $TMUX_DIR/.tmux ~
 
 echo ''
 echo 'set up zsh'
