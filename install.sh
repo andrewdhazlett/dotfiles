@@ -18,6 +18,7 @@ fi
 links=(
 	$DIR/.SpaceVim.d
 	$DIR/.npmrc
+  $DIR/.vim
 	$DIR/.zprezto
 	$DIR/git/.gitconfig
 	$DIR/tmuxconf/.tmux

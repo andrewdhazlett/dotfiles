@@ -8,6 +8,7 @@ links=(
 	.macos_aliases
 	.npmrc
 	.tmux.conf
+	.vim
 	.zlogin
 	.zlogout
 	.zprezto
