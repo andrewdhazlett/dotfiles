@@ -2,15 +2,14 @@
 
 # todo: make sure everything is links first and safely move real files somewhere
 links=(
-  .aliases
-  .bashrc
+	SpaceVim.d
+	bashrc
 	.gitconfig
-	.macos_aliases
 	.npmrc
+	.tmux
 	.tmux.conf
 	.vim
 	.zlogin
-	.zlogout
 	.zprezto
 	.zpreztorc
 	.zprofile
