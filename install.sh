@@ -17,8 +17,8 @@ fi
 
 links=(
 	$DIR/.npmrc
-	$DIR/.tmux
-	$DIR/.tmux.conf
+	$DIR/tmuxconf/.tmux
+	$DIR/tmuxconf/.tmux.conf
 	$DIR/.zprezto
 	$DIR/zsh/.zpreztorc
 	$DIR/zsh/.zshrc
