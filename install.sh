@@ -16,13 +16,14 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 links=(
+	$DIR/.SpaceVim.d
 	$DIR/.npmrc
+	$DIR/.zprezto
+	$DIR/git/.gitconfig
 	$DIR/tmuxconf/.tmux
 	$DIR/tmuxconf/.tmux.conf
-	$DIR/.zprezto
 	$DIR/zsh/.zpreztorc
 	$DIR/zsh/.zshrc
-	$DIR/git/.gitconfig
 )
 echo "linking ${links[@]}"
 ln -s ${links[@]} ~
