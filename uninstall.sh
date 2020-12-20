@@ -6,6 +6,7 @@ links=(
   .bashrc
 	.gitconfig
 	.macos_aliases
+	.npmrc
 	.tmux.conf
 	.zlogin
 	.zlogout
