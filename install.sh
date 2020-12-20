@@ -21,39 +21,25 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	source $MACOS_DIR/macos.sh
 fi
 
+links=(
+	$DIR/.npmrc
+	$DIR/.tmux
+	$DIR/.tmux.conf
+	$DIR/zsh/.zprezto
+	$DIR/zsh/.zpreztorc
+	$DIR/zsh/.zshrc
+	$DIR/git/.gitconfig
+)
+echo "linking ${links[@]}"
+ln -s ${links[@]} ~
+
+echo ''
 echo 'set up node'
-echo ''
 rm $HOME/.npmrc
-ln -s $DIR/.npmrc $HOME/.npmrc
 mkdir $HOME/npm
-
-echo ''
-echo 'update npm'
 npm install -g npm@latest
-
-echo ''
-echo 'set up tmux'
-TMUX_DIR=`pwd`/tmuxconf
-ln -s $TMUX_DIR/.tmux.conf ~
-ln -s $TMUX_DIR/.tmux ~
 
 echo ''
 echo 'set up zsh'
-ZSH_DIR=`pwd`/zsh
-# link prezto
-ln -s $ZSH_DIR/.zprezto ~
-# link internal prezto conf
-ln -s $ZSH_DIR/.zprezto/runcoms/zlogin ~/.zlogin
-ln -s $ZSH_DIR/.zprezto/runcoms/zprofile ~/.zprofile
-# link custom config
-ln -s $ZSH_DIR/.zpreztorc ~
-ln -s $ZSH_DIR/.zshrc ~
-
-echo ''
-echo 'set up links for config files'
-ln -s $DIR/git/.gitconfig ~
-ln -s $DIR/.npmrc ~
-
-echo ''
-echo 'update npm'
-npm install -g npm@latest
+ln -s $DIR/zsh/.zprezto/runcoms/zlogin ~/.zlogin
+ln -s $DIR/zsh/.zprezto/runcoms/zprofile ~/.zprofile
