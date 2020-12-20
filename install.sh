@@ -19,7 +19,7 @@ links=(
 	$DIR/.npmrc
 	$DIR/.tmux
 	$DIR/.tmux.conf
-	$DIR/zsh/.zprezto
+	$DIR/.zprezto
 	$DIR/zsh/.zpreztorc
 	$DIR/zsh/.zshrc
 	$DIR/git/.gitconfig
@@ -30,5 +30,5 @@ ln -s ${links[@]} ~
 mkdir $HOME/npm
 npm install -g npm@latest
 
-ln -s $DIR/zsh/.zprezto/runcoms/zlogin ~/.zlogin
-ln -s $DIR/zsh/.zprezto/runcoms/zprofile ~/.zprofile
+ln -s $DIR/.zprezto/runcoms/zlogin ~/.zlogin
+ln -s $DIR/.zprezto/runcoms/zprofile ~/.zprofile
