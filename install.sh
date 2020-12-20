@@ -1,5 +1,7 @@
 #! /bin/bash
 
+./uninstall.sh
+
 git submodule update --init --recursive
 
 DIR=`git rev-parse --show-toplevel`
