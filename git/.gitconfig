@@ -26,3 +26,4 @@
 	user = andrewdhazlett
 [core]
 	editor = /usr/local/bin/vim
+	autocrlf = input
