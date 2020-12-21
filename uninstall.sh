@@ -2,8 +2,8 @@
 
 # todo: make sure everything is links first and safely move real files somewhere
 links=(
-	SpaceVim.d
-	bashrc
+	.SpaceVim.d
+	.bashrc
 	.gitconfig
 	.npmrc
 	.tmux
