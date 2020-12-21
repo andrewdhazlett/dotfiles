@@ -20,6 +20,7 @@ fi
 
 links=(
 	$DIR/.SpaceVim.d
+	$DIR/.bashrc
 	$DIR/.npmrc
   $DIR/.vim
 	$DIR/.zprezto
