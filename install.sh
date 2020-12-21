@@ -34,5 +34,6 @@ echo "linking ${links[@]}"
 ln -s ${links[@]} ~
 
 mkdir $HOME/npm
+ln -s $DIR/.vim ~/.SpaceVim
 ln -s $DIR/.zprezto/runcoms/zlogin ~/.zlogin
 ln -s $DIR/.zprezto/runcoms/zprofile ~/.zprofile
