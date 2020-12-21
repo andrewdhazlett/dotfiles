@@ -8,8 +8,6 @@ fi
 
 export PATH='/usr/local/bin:'$PATH
 export PATH='/usr/local/sbin:'$PATH
-export PATH="/usr/local/opt/python@3/bin:$PATH"
-export PATH="/usr/local/opt/python@2/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
