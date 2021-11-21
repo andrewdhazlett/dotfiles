@@ -6,6 +6,7 @@ git submodule foreach --recursive git add --renormalize .
 DIR=`git rev-parse --show-toplevel`
 
 links=(
+	$DIR/.alacritty.yml
 	$DIR/.bashrc
 	$DIR/.npmrc
 	$DIR/.zprezto
