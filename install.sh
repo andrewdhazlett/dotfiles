@@ -8,17 +8,20 @@ DIR=`git rev-parse --show-toplevel`
 links=(
 	$DIR/.alacritty.yml
 	$DIR/.bashrc
+	$DIR/.gitattributes
+	$DIR/.gitconfig
+	$DIR/.gitignore
 	$DIR/.npmrc
+	$DIR/.tmux
+	$DIR/.tmux.conf
 	$DIR/.zprezto
-	$DIR/git/.gitconfig
-	$DIR/tmuxconf/.tmux
-	$DIR/tmuxconf/.tmux.conf
-	$DIR/zsh/.zpreztorc
-	$DIR/zsh/.zshrc
+	$DIR/.zpreztorc
+	$DIR/.zshrc
 )
 echo "linking ${links[@]}"
 ln -s ${links[@]} ~
 
 mkdir $HOME/npm
+
 ln -s $DIR/.zprezto/runcoms/zlogin ~/.zlogin
 ln -s $DIR/.zprezto/runcoms/zprofile ~/.zprofile
