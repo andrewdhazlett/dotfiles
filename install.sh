@@ -19,10 +19,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 links=(
-	$DIR/.SpaceVim.d
 	$DIR/.bashrc
 	$DIR/.npmrc
-  $DIR/.vim
 	$DIR/.zprezto
 	$DIR/git/.gitconfig
 	$DIR/tmuxconf/.tmux
