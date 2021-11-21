@@ -1,7 +1,5 @@
 #! /bin/bash
 
-./uninstall.sh
-
 git submodule update --init --recursive
 git submodule foreach --recursive git add --renormalize .
 
