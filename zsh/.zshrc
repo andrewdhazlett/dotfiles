@@ -5,7 +5,7 @@ fi
 
 # enable true color for nvim
 # export NVIM_TUI_ENABLE_TRUE_COLOR="1"
-
+export PATH='/opt/homebrew/bin':$PATH
 export PATH='/usr/local/bin:'$PATH
 export PATH='/usr/local/sbin:'$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
