@@ -1,6 +1,18 @@
 # enable true color for nvim
 # export NVIM_TUI_ENABLE_TRUE_COLOR="1"
 
+# set up completions
+# - case-insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+# - partial completion suggestions
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
+# - load the completions
+autoload -Uz compinit && compinit
+
+# set up aliases
+alias -g la='ls -la'
+
 export PATH='/usr/local/bin:'$PATH
 export PATH='/usr/local/sbin:'$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
