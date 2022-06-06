@@ -13,6 +13,7 @@ autoload -Uz compinit && compinit
 # set up aliases
 alias -g la='ls -la'
 
+export PATH='/opt/homebrew/bin':$PATH
 export PATH='/usr/local/bin:'$PATH
 export PATH='/usr/local/sbin:'$PATH
 export PATH="$HOME/.cargo/bin:$PATH"

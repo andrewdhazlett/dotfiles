@@ -1,10 +1,6 @@
 [user]
 	name = andrewdhazlett
 	email = andrew@hazlett.me
-[credential]
-	helper = store
-[credential "https://github.com"]
-	username = andrewdhazlett
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -25,7 +21,6 @@
 [github]
 	user = andrewdhazlett
 [core]
-	editor = /usr/local/bin/vim
 	autocrlf = input
 	excludesfile = /Users/andrew/.gitignore
 [pull]
