@@ -9,25 +9,31 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [alias]
-  a = add
+	a = add
 	ac = commit --amend
-  br = branch
-  ci = commit
+	br = branch
+	ci = commit
 	cm = commit -m
-  co = checkout
+	co = checkout
 	di = diff
-  dump = cat-file -p
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	dump = cat-file -p
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	po = push origin
 	ph = push -u origin HEAD
-  st = status
-  type = cat-file -t
+	st = status
+	type = cat-file -t
 [github]
 	user = andrewdhazlett
 [core]
 	editor = /usr/local/bin/vim
 	autocrlf = input
+	excludesfile = /Users/andrew/.gitignore
 [pull]
 	ff = only
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
