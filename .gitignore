@@ -5,3 +5,4 @@
 
 .tmux/tmux-plugins
 .tmux/resurrect
+tmux-client-*.log
