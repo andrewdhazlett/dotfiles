@@ -13,14 +13,12 @@ autoload -Uz compinit && compinit
 # set up aliases
 alias -g la='ls -la'
 
-export PATH="$(brew --prefix)/bin:$PATH"
+export PATH="/opt/homebrew/bin:"$PATH
 export PATH="$(brew --prefix)/sbin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/npm/bin:$PATH"
-
-. "$(brew --prefix)/opt/asdf/libexec/asdf.sh"
 
 eval "$(starship init zsh)"
