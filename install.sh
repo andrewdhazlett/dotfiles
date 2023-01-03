@@ -4,6 +4,7 @@ DIR=`git rev-parse --show-toplevel`
 
 links=(
 	$DIR/.alacritty.yml
+	$DIR/.alacritty-nord.yml
 	$DIR/.bashrc
 	$DIR/.gitattributes
 	$DIR/.gitconfig
