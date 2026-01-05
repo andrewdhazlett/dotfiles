@@ -22,6 +22,7 @@
 	user = andrewdhazlett
 [core]
 	autocrlf = input
+	editor = nvim
 	excludesfile = /Users/andrew/.gitignore
 [pull]
 	ff = only
