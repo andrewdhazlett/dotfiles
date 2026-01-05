@@ -26,7 +26,7 @@ links=(
 	$DIR/raycast
 )
 echo "linking .config files ${links[@]}"
-mkdir ~/.config
+mkdir -p ~/.config
 ln -s ${links[@]} ~/.config
 
 mkdir $HOME/npm
