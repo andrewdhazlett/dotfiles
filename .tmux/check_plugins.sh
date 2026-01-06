@@ -16,7 +16,7 @@ plugins="tmux-plugins/tpm
 tmux-plugins/tmux-sensible
 tmux-plugins/tmux-resurrect
 tmux-plugins/tmux-continuum
-arcticicestudio/nord-tmux"
+nordtheme/tmux"
 
 missing=""
 for plugin_name in $plugins; do
@@ -38,7 +38,7 @@ for plugin_name in $plugins; do
 done
 
 if [ -n "$missing" ]; then
-  echo "⚠️  Missing plugins: $missing. Install: $TPM/bin/install_plugins"
+  echo "⚠️  Missing plugins: $missing. Install: leader + I"
   exit 1
 fi
 
