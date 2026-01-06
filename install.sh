@@ -22,8 +22,9 @@ ln -s ${links[@]} ~
 # link .config files
 links=(
 	$DIR/karabiner
-	$DIR/starship.toml
+	$DIR/nvim
 	$DIR/raycast
+	$DIR/starship.toml
 )
 echo "linking .config files ${links[@]}"
 mkdir -p ~/.config
