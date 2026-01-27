@@ -46,6 +46,52 @@ return {
     },
   },
 
+  -- Flash.nvim for ace-jump style navigation (spacemacs-style bindings)
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      {
+        "<leader>jj",
+        mode = { "n", "x", "o" },
+        function() require("flash").jump() end,
+        desc = "Flash jump",
+      },
+      {
+        "<leader>jl",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump({
+            search = { mode = "search", max_length = 0 },
+            label = { after = { 0, 0 } },
+            pattern = "^",
+          })
+        end,
+        desc = "Flash jump to line",
+      },
+      {
+        "<leader>jw",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump({
+            pattern = ".", -- character class
+            search = {
+              mode = function(str) return "\\<" .. str end,
+            },
+          })
+        end,
+        desc = "Flash jump to word",
+      },
+      {
+        "<leader>jt",
+        mode = { "n", "x", "o" },
+        function() require("flash").treesitter() end,
+        desc = "Flash Treesitter",
+      },
+    },
+  },
+
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
 
