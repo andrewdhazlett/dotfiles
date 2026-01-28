@@ -4,11 +4,42 @@
 
 ---@type LazySpec
 return {
-  -- Nord colorscheme (nordic.nvim)
+  -- Nord colorscheme (shaunsingh/nord.nvim)
   {
-    "AlexvZyl/nordic.nvim",
+    "shaunsingh/nord.nvim",
     lazy = false,
     priority = 1000,
+    config = function()
+      -- Options must be set before loading colorscheme
+      vim.g.nord_contrast = true           -- brighter sidebars and popups
+      vim.g.nord_borders = true            -- enable borders between splits
+      vim.g.nord_disable_background = true -- use the terminal background
+      vim.g.nord_italic = true             -- enable italic comments
+      vim.g.nord_bold = true               -- enable bold keywords
+      require("nord").set()
+    end,
+  },
+
+  -- Headlines for markdown (uses nord.nvim highlight groups)
+  {
+    "lukas-reineke/headlines.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    ft = { "markdown", "norg", "org", "rmd" },
+    opts = {
+      markdown = {
+        headline_highlights = {
+          "Headline1",
+          "Headline2",
+          "Headline3",
+          "Headline4",
+          "Headline5",
+          "Headline6",
+        },
+        codeblock_highlight = "CodeBlock",
+        dash_highlight = "Dash",
+        quote_highlight = "Quote",
+      },
+    },
   },
 
   -- == Examples of Adding Plugins ==
@@ -99,7 +130,7 @@ return {
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
-      require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
+      require "astronvim.plugins.configs.luasnip" (plugin, opts) -- include the default astronvim config that calls the setup call
       -- add more custom luasnip configuration such as filetype extend or custom snippets
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
@@ -109,7 +140,7 @@ return {
   {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
-      require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
+      require "astronvim.plugins.configs.nvim-autopairs" (plugin, opts) -- include the default astronvim config that calls the setup call
       -- add more custom autopairs configuration such as custom rules
       local npairs = require "nvim-autopairs"
       local Rule = require "nvim-autopairs.rule"
@@ -117,18 +148,18 @@ return {
       npairs.add_rules(
         {
           Rule("$", "$", { "tex", "latex" })
-            -- don't add a pair if the next character is %
-            :with_pair(cond.not_after_regex "%%")
-            -- don't add a pair if  the previous character is xxx
-            :with_pair(
-              cond.not_before_regex("xxx", 3)
-            )
-            -- don't move right when repeat character
-            :with_move(cond.none())
-            -- don't delete if the next character is xx
-            :with_del(cond.not_after_regex "xx")
-            -- disable adding a newline when you press <cr>
-            :with_cr(cond.none()),
+          -- don't add a pair if the next character is %
+              :with_pair(cond.not_after_regex "%%")
+          -- don't add a pair if  the previous character is xxx
+              :with_pair(
+                cond.not_before_regex("xxx", 3)
+              )
+          -- don't move right when repeat character
+              :with_move(cond.none())
+          -- don't delete if the next character is xx
+              :with_del(cond.not_after_regex "xx")
+          -- disable adding a newline when you press <cr>
+              :with_cr(cond.none()),
         },
         -- disable for .vim files, but it work for another filetypes
         Rule("a", "a", "-vim")
