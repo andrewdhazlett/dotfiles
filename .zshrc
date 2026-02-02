@@ -12,6 +12,7 @@ autoload -Uz compinit && compinit
 
 # set up aliases
 alias -g la='ls -la'
+alias -g gti='git'
 
 export PATH="/opt/homebrew/bin:"$PATH
 export PATH="$(brew --prefix)/sbin:$PATH"
