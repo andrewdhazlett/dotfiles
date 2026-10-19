@@ -22,4 +22,9 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/npm/bin:$PATH"
 
+# shared turbo cache across all repos/worktrees (entries are content-addressed)
+export TURBO_CACHE_DIR="$HOME/.cache/turbo"
+export TURBO_TELEMETRY_DISABLED=1
+[ -d "$TURBO_CACHE_DIR" ] && (find "$TURBO_CACHE_DIR" -mtime +30 -delete &) 2>/dev/null
+
 eval "$(starship init zsh)"
