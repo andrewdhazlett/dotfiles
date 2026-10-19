@@ -1,11 +1,17 @@
 **/.DS_Store
 
+**/*.local.*
 **/todos.md
 **/scratch.*
 **/.yarn/cache
+**/.worktrees
 
 raycast/extensions
 
 .tmux/tmux-plugins
 .tmux/resurrect
 tmux-client-*.log
+
+# agent runtime state
+.omo/
+omp/**/*.lock
