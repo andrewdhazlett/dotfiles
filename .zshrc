@@ -27,4 +27,7 @@ export TURBO_CACHE_DIR="$HOME/.cache/turbo"
 export TURBO_TELEMETRY_DISABLED=1
 [ -d "$TURBO_CACHE_DIR" ] && (find "$TURBO_CACHE_DIR" -mtime +30 -delete &) 2>/dev/null
 
+# allows gcloud cli to use NumPy for improved ssh performance
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
 eval "$(starship init zsh)"
