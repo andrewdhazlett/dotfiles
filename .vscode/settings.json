@@ -7,7 +7,9 @@
     "nordfox",
     "nordtheme",
     "nvim",
+    "skhd",
     "toplevel",
-    "wezterm"
+    "wezterm",
+    "yabai"
   ]
 }
