@@ -30,4 +30,5 @@ export TURBO_TELEMETRY_DISABLED=1
 # allows gcloud cli to use NumPy for improved ssh performance
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
+eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
