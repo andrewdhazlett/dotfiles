@@ -17,6 +17,8 @@ task:
     security-reviewer: "@slow"
     task: "@task"
     sonic: "@smol"
+compaction:
+  thresholdTokens: 280000
 theme:
   dark: dark-nord
 symbolPreset: nerd

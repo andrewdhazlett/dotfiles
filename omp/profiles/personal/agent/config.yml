@@ -19,6 +19,8 @@ task:
     sonic: "@smol"
   agentServiceTierOverrides:
     sonic: priority
+compaction:
+  thresholdTokens: 280000
 setupVersion: 2
 theme:
   dark: dark-nord
