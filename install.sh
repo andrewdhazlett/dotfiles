@@ -36,4 +36,9 @@ mkdir -p ~/.omp/agent ~/.omp/profiles/personal/agent
 ln -s $DIR/omp/agent/config.yml $DIR/omp/agent/models.yml ~/.omp/agent
 ln -s $DIR/omp/profiles/personal/agent/config.yml ~/.omp/profiles/personal/agent
 
+# link worktrunk config; approvals.toml stays local
+echo "linking worktrunk config"
+mkdir -p ~/.config/worktrunk
+ln -s $DIR/worktrunk/config.toml ~/.config/worktrunk
+
 mkdir $HOME/npm

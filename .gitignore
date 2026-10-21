@@ -5,6 +5,9 @@
 **/scratch.*
 **/.yarn/cache
 **/.worktrees
+# personal worktrunk project hooks; ignored so `wt step copy-ignored` carries
+# them into new worktrees (repos that commit theirs are unaffected)
+/.config/wt.toml
 
 raycast/extensions
 

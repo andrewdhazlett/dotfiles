@@ -1,0 +1,27 @@
+# worktrunk (wt) user config; linked to ~/.config/worktrunk/config.toml.
+# Repo-specific hooks belong in that repo's .config/wt.toml.
+
+# Inside the repo (~/.gitignore ignores **/.worktrees), so tools that walk up
+# for config still find the main checkout's.
+worktree-path = "{{ repo_path }}/.worktrees/{{ branch | sanitize }}"
+
+[step.copy-ignored]
+# Copy only what an install can't recreate (.env, local config, target/).
+# Package managers rebuild node_modules from their global cache, venvs embed
+# absolute paths, and build output from the primary checkout belongs to
+# whatever branch it's on.
+exclude = ["node_modules/", ".venv/", "dist/", ".turbo/"]
+
+# Blocking, so agents get a usable tree as soon as `wt switch` returns.
+[[pre-start]]
+copy = "wt step copy-ignored"
+
+[[pre-start]]
+js = """
+if [ -f pnpm-lock.yaml ]; then pnpm install --frozen-lockfile
+elif [ -f bun.lock ] || [ -f bun.lockb ]; then bun install --frozen-lockfile
+elif [ -f yarn.lock ]; then yarn install --frozen-lockfile
+elif [ -f package-lock.json ]; then npm install --no-audit --no-fund
+fi
+"""
+python = "if [ -f uv.lock ]; then uv sync; fi"
