@@ -41,4 +41,10 @@ echo "linking worktrunk config"
 mkdir -p ~/.config/worktrunk
 ln -s $DIR/worktrunk/config.toml ~/.config/worktrunk
 
+# link global agent rules; omp (every profile) reads ~/.agents/AGENTS.md,
+# opencode loads it via "instructions" in ~/.config/opencode/opencode.json
+echo "linking global agent rules"
+mkdir -p ~/.agents
+ln -s $DIR/agents/AGENTS.md ~/.agents/AGENTS.md
+
 mkdir $HOME/npm
