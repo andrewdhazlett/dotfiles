@@ -41,8 +41,13 @@ echo "linking worktrunk config"
 mkdir -p ~/.config/worktrunk
 ln -s $DIR/worktrunk/config.toml ~/.config/worktrunk
 
+# link opencode config; auth, plugins, and accounts stay local
+echo "linking opencode config"
+mkdir -p ~/.config/opencode
+ln -s $DIR/opencode/opencode.json ~/.config/opencode
+
 # link global agent rules; omp (every profile) reads ~/.agents/AGENTS.md,
-# opencode loads it via "instructions" in ~/.config/opencode/opencode.json
+# opencode loads it through "instructions" in opencode.json
 echo "linking global agent rules"
 mkdir -p ~/.agents
 ln -s $DIR/agents/AGENTS.md ~/.agents/AGENTS.md
