@@ -1,0 +1,8 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "nord",
+  "plugin": [
+    "oh-my-openagent@4.19.4",
+    "./profile-badge.ts"
+  ]
+}

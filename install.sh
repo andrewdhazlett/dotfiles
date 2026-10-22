@@ -42,12 +42,13 @@ echo "linking worktrunk config"
 mkdir -p ~/.config/worktrunk
 ln -s $DIR/worktrunk/config.toml ~/.config/worktrunk
 
-# link opencode config; auth, plugins, and accounts stay local.
-# profile-badge.ts must also be listed as "./profile-badge.ts" in the local
-# ~/.config/opencode/tui.json "plugin" array (opencode rewrites that file)
+# link opencode config; auth, plugins, accounts, and herdr's tui.jsonc stay local.
+# keep the oh-my-openagent pin identical in opencode.json and tui.json: on
+# startup the plugin rewrites tui.json by temp-file rename when its TUI entry
+# is missing, which would replace this symlink with a plain file
 echo "linking opencode config"
 mkdir -p ~/.config/opencode
-ln -s $DIR/opencode/opencode.json $DIR/opencode/profile-badge.ts ~/.config/opencode
+ln -s $DIR/opencode/opencode.json $DIR/opencode/tui.json $DIR/opencode/profile-badge.ts ~/.config/opencode
 
 # link global agent rules; omp (every profile) reads ~/.agents/AGENTS.md,
 # opencode loads it through "instructions" in opencode.json
