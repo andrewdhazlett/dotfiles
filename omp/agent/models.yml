@@ -1,7 +1,0 @@
-# Work credentials (API billing). Keys are read at request time from opencode's
-# global store so there is a single source of truth; nothing is copied here.
-providers:
-  anthropic:
-    apiKey: "!jq -r .anthropic.key ~/.local/share/opencode/auth.json"
-  openai:
-    apiKey: "!jq -r .openai.key ~/.local/share/opencode/auth.json"

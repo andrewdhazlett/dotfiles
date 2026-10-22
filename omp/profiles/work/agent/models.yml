@@ -1,0 +1,8 @@
+# Work credentials (API billing). Keys are read at request time from
+# ~/.local/share/work-keys/ (mode 0600, never committed), shared with
+# opencode's work config; nothing is copied here.
+providers:
+  anthropic:
+    apiKey: "!cat ~/.local/share/work-keys/anthropic"
+  openai:
+    apiKey: "!cat ~/.local/share/work-keys/openai"

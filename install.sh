@@ -30,21 +30,24 @@ echo "linking .config files ${links[@]}"
 mkdir -p ~/.config
 ln -s ${links[@]} ~/.config
 
-# link omp config; runtime state (auth, sessions, DBs) stays local
+# link omp config; runtime state (auth, sessions, DBs) stays local.
+# default profile = personal logins; `work` profile bills work API keys
 echo "linking omp config"
-mkdir -p ~/.omp/agent ~/.omp/profiles/personal/agent
-ln -s $DIR/omp/agent/config.yml $DIR/omp/agent/models.yml ~/.omp/agent
-ln -s $DIR/omp/profiles/personal/agent/config.yml ~/.omp/profiles/personal/agent
+mkdir -p ~/.omp/agent ~/.omp/profiles/work/agent
+ln -s $DIR/omp/agent/config.yml ~/.omp/agent
+ln -s $DIR/omp/profiles/work/agent/config.yml $DIR/omp/profiles/work/agent/models.yml ~/.omp/profiles/work/agent
 
 # link worktrunk config; approvals.toml stays local
 echo "linking worktrunk config"
 mkdir -p ~/.config/worktrunk
 ln -s $DIR/worktrunk/config.toml ~/.config/worktrunk
 
-# link opencode config; auth, plugins, and accounts stay local
+# link opencode config; auth, plugins, and accounts stay local.
+# profile-badge.ts must also be listed as "./profile-badge.ts" in the local
+# ~/.config/opencode/tui.json "plugin" array (opencode rewrites that file)
 echo "linking opencode config"
 mkdir -p ~/.config/opencode
-ln -s $DIR/opencode/opencode.json ~/.config/opencode
+ln -s $DIR/opencode/opencode.json $DIR/opencode/profile-badge.ts ~/.config/opencode
 
 # link global agent rules; omp (every profile) reads ~/.agents/AGENTS.md,
 # opencode loads it through "instructions" in opencode.json
