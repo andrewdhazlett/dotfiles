@@ -1,0 +1,10 @@
+{
+  "providers": {
+    "anthropic": {
+      "apiKey": "!cat ~/.local/share/work-keys/anthropic"
+    },
+    "openai": {
+      "apiKey": "!cat ~/.local/share/work-keys/openai"
+    }
+  }
+}
