@@ -30,5 +30,8 @@ export TURBO_TELEMETRY_DISABLED=1
 # allows gcloud cli to use NumPy for improved ssh performance
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
+# opt out of omo (OmO Native) anonymous telemetry
+export OMO_SEND_ANONYMOUS_TELEMETRY=0
+
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
