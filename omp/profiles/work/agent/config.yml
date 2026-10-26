@@ -1,12 +1,12 @@
 modelRoles:
-  default: anthropic/claude-opus-5-5:medium
+  default: anthropic/claude-fable-5-1:medium
   plan: anthropic/claude-fable-5-1:max
-  slow: openai/gpt-6-astra:max
-  task: openai/gpt-6-astra:max
+  slow: openai/gpt-6.1-sol:max
+  task: openai/gpt-6.1-sol:max
   smol: anthropic/claude-haiku-4-5
   vision: anthropic/claude-opus-5-5:high
   commit: anthropic/claude-sonnet-5-5
-  advisor: openai/gpt-6-astra:high
+  advisor: openai/gpt-6.1-sol:high
   tiny: "@smol"
   memory: "@smol"
   widget: "@smol"
@@ -32,3 +32,5 @@ symbolPreset: nerd
 composer:
   shape: band
 setupVersion: 2
+dev:
+  autoqaConsent: denied
