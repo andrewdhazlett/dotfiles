@@ -1,0 +1,49 @@
+# Hindsight memory servers for omp (see omp/agent/config.yml and the work profile).
+#   docker compose -f hindsight/compose.yml up -d
+# Data, the ChatGPT login, and Postgres live in the external volumes below, not here.
+# First-time ChatGPT login (personal): run `hindsight-admin chatgpt login` in a container
+# with the hindsight-chatgpt volume mounted; its 127.0.0.1:1455 callback must be forwarded.
+name: hindsight
+
+x-image: &image ghcr.io/vectorize-io/hindsight:latest
+
+services:
+  personal:
+    image: *image
+    container_name: hindsight
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:8888:8888 # API (omp default profile)
+      - 127.0.0.1:9999:9999 # UI
+    environment:
+      HINDSIGHT_API_LLM_PROVIDER: chatgpt
+      HINDSIGHT_API_LLM_CHATGPT_HOME: /home/hindsight/.hindsight/chatgpt
+      # Keep extracted facts only; raw transcripts would bypass the retain mission.
+      HINDSIGHT_API_STORE_DOCUMENT_TEXT: "false"
+    volumes:
+      - hindsight-data:/home/hindsight/.pg0
+      - hindsight-chatgpt:/home/hindsight/.hindsight
+
+  work:
+    image: *image
+    container_name: hindsight-work
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:8889:8888 # API (omp work profile)
+      - 127.0.0.1:9998:9999 # UI
+    environment:
+      HINDSIGHT_API_LLM_PROVIDER: openai
+      HINDSIGHT_API_LLM_MODEL: gpt-5-mini
+    volumes:
+      - hindsight-work-data:/home/hindsight/.pg0
+      # Key read from a file at start so it never appears in `docker inspect`.
+      - ${HOME}/.local/share/work-keys/hindsight-openai:/run/secrets/openai-key:ro
+    entrypoint: ["sh", "-c", 'HINDSIGHT_API_LLM_API_KEY="$$(tr -d "\n" < /run/secrets/openai-key)" exec /app/start-all.sh']
+
+volumes:
+  hindsight-data:
+    external: true
+  hindsight-chatgpt:
+    external: true
+  hindsight-work-data:
+    external: true
