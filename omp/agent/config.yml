@@ -26,17 +26,7 @@ memory:
   backend: hindsight
 hindsight:
   apiUrl: http://localhost:8888
-  # Personal bank only; the work profile's bank keeps work specifics.
-  retainMission: >-
-    Personal memory bank for one user's personal projects and agent tooling.
-    Keep durable lessons, decisions, procedures, and preferences, but strip
-    anything identifying the user's employer: no employer, organisation,
-    product, customer, or internal repository, service, or host names; no
-    ticket, PR, issue, or workspace IDs; no internal URLs; no colleague names
-    or handles; no filesystem paths inside work directories. Never store
-    secrets (API keys, tokens, passwords, auth codes). Generalise instead
-    ("a work repo", "the work tracker", "a colleague"). If a fact is only
-    meaningful with those identifiers, do not store it.
+  retainMission: "Personal memory bank for one user's personal projects and agent tooling. Keep durable lessons, decisions, procedures, and preferences, but strip anything identifying the user's employer: no employer, organisation, product, customer, or internal repository, service, or host names; no ticket, PR, issue, or workspace IDs; no internal URLs; no colleague names or handles; no filesystem paths inside work directories. Never store secrets (API keys, tokens, passwords, auth codes). Generalise instead (\"a work repo\", \"the work tracker\", \"a colleague\"). If a fact is only meaningful with those identifiers, do not store it."
 features:
   unexpectedStopDetection: smart
 setupVersion: 2
@@ -45,3 +35,5 @@ theme:
 symbolPreset: nerd
 composer:
   shape: band
+dev:
+  autoqaConsent: denied
