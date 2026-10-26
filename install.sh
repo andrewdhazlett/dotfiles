@@ -9,6 +9,7 @@ links=(
 	$DIR/.bashrc
 	$DIR/.gitattributes
 	$DIR/.gitconfig
+	$DIR/.gitconfig-personal
 	$DIR/.gitignore
 	$DIR/.npmrc
 	$DIR/.tmux

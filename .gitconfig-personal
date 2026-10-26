@@ -1,0 +1,12 @@
+# Included for repos under ~/git/andrewdhazlett/ (see includeIf in .gitconfig).
+[user]
+	email = andrew@hazlett.me
+	signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
