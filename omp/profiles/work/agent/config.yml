@@ -10,6 +10,7 @@ modelRoles:
   tiny: "@smol"
   memory: "@smol"
   widget: "@smol"
+  judge: anthropic/claude-sonnet-5-5
 task:
   agentModelOverrides:
     scout: anthropic/claude-sonnet-5-5:low
@@ -19,6 +20,12 @@ task:
     sonic: "@smol"
 compaction:
   thresholdTokens: 280000
+memory:
+  backend: hindsight
+hindsight:
+  apiUrl: http://localhost:8889
+features:
+  unexpectedStopDetection: smart
 theme:
   dark: dark-nord
 symbolPreset: nerd
