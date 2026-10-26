@@ -8,8 +8,8 @@
     "disabled_hooks": ["no-sisyphus-gpt"],
     "agents": {
       "sisyphus": {
-        "model": "anthropic/claude-fable-5-1",
-        "reasoning": "medium"
+        "model": "anthropic/claude-opus-5-5",
+        "reasoning": "high"
       },
       "hephaestus": {
         "model": "openai/gpt-6-astra-fast",
@@ -31,7 +31,7 @@
         "reasoning": "high"
       },
       "prometheus": {
-        "model": "anthropic/claude-fable-5-1",
+        "model": "anthropic/claude-opus-5-5",
         "reasoning": "max"
       },
       "metis": {
@@ -55,12 +55,12 @@
         "model": "openai/gpt-6-astra-pro",
         "reasoning": "max"
       },
-      "deep": {
+      "deep-low": {
         "model": "openai/gpt-6-astra",
         "reasoning": "max"
       },
       "quick": {
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "anthropic/claude-haiku-5-5"
       },
       "unspecified-low": {
         "model": "openai/gpt-6-astra",
@@ -88,7 +88,8 @@
   },
   "_migrations": [
     "2026-07-opencode-config-unification",
-    "2026-08-reasoning-unification"
+    "2026-08-reasoning-unification",
+    "2026-09-opencode-routing-notice"
   ],
   "[native]": {
     "model_profile": "chatgpt-subscription/gpt-6-astra",
@@ -98,7 +99,7 @@
         "reasoning": "max"
       },
       "quick": {
-        "model": "anthropic-subscription/claude-haiku-4-5"
+        "model": "anthropic-subscription/claude-haiku-5-5"
       },
       "unspecified-high": {
         "model": "chatgpt-subscription/gpt-6-astra",
