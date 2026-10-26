@@ -32,8 +32,9 @@ services:
       - 127.0.0.1:8889:8888 # API (omp work profile)
       - 127.0.0.1:9998:9999 # UI
     environment:
-      HINDSIGHT_API_LLM_PROVIDER: openai
-      HINDSIGHT_API_LLM_MODEL: gpt-5-mini
+      # Responses API: lets reflect's tool loop keep reasoning enabled.
+      HINDSIGHT_API_LLM_PROVIDER: openai-responses
+      HINDSIGHT_API_LLM_MODEL: gpt-6-luna
     volumes:
       - hindsight-work-data:/home/hindsight/.pg0
       # Key read from a file at start so it never appears in `docker inspect`.
