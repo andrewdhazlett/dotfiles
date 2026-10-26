@@ -18,11 +18,17 @@ services:
     environment:
       HINDSIGHT_API_LLM_PROVIDER: chatgpt
       HINDSIGHT_API_LLM_CHATGPT_HOME: /home/hindsight/.hindsight/chatgpt
-      # Keep extracted facts only; raw transcripts would bypass the retain mission.
-      HINDSIGHT_API_STORE_DOCUMENT_TEXT: "false"
+      # Scrub work identifiers and secrets from every retain before storage
+      # (extensions/scrub_retain.py). The denylist names work identifiers, so it
+      # stays outside this public repo; the server refuses to start without it.
+      PYTHONPATH: /opt/hindsight-ext
+      HINDSIGHT_API_OPERATION_VALIDATOR_EXTENSION: scrub_retain:ScrubRetainValidator
+      HINDSIGHT_API_OPERATION_VALIDATOR_DENYLIST: /run/secrets/denylist.txt
     volumes:
       - hindsight-data:/home/hindsight/.pg0
       - hindsight-chatgpt:/home/hindsight/.hindsight
+      - ./extensions:/opt/hindsight-ext:ro
+      - ${HOME}/.local/share/hindsight/personal-denylist.txt:/run/secrets/denylist.txt:ro
 
   work:
     image: *image
