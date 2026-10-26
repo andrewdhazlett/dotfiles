@@ -17,3 +17,14 @@ Before telling the user that something still needs their attention — a branch 
 
 - Applies to every closing "loose ends" / "next steps" / "still open" list, not just git state.
 - If a check is not possible from here, say it is unverified rather than stating it as a todo.
+
+## Use long-term memory when the harness provides it
+
+Some harnesses expose a memory bank (omp: `xd://recall`, `xd://retain`, `xd://reflect`, backend "hindsight"). When it exists, it is part of the job, not an optional extra; automatic extraction captures fragments, not procedures.
+
+- **Recall first** for any question about past work, prior decisions, or "how did we do X" — before searching transcripts or the archive. A recall hit usually names the session to open.
+- **Recalled facts are leads, not ground truth.** A memory records a moment; verify anything about current state (open work, pending choices, config, branch/PR/ticket status) live before acting on or reporting it.
+- **Retain at decision time**, in the same turn: a decision and its reason, a procedure that took effort to derive (commands, gotchas), an external fact that cannot be re-derived from the repo, and anything the user corrects you on. Not task state, not things a skill or the repo already says. **Never secrets** (keys, tokens, passwords, auth URLs with codes): retained text is processed by the memory server's LLM provider.
+- **Which bank:** the harness profile selects it; never point a session at another profile's bank. A work-profile session retains to the work bank, with work specifics intact. A personal bank may hold lessons learned at work, but only after the same sanitizing the skill library gets (`skill-maintenance` §3): no employer, org, product, or customer names, internal repo/host/URL names, workspace/ticket/PR IDs, colleague names, or absolute paths. Keep the lesson, drop the identifiers.
+- **Routing** between skills, overlays, and memory: see `skill-maintenance`.
+- Workers and sub-agents usually have no memory; the orchestrator retains their outcomes.
