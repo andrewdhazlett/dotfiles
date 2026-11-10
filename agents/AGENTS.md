@@ -28,3 +28,7 @@ Some harnesses expose a memory bank (omp: `xd://recall`, `xd://retain`, `xd://re
 - **Which bank:** the harness profile selects it; never point a session at another profile's bank. A work-profile session retains to the work bank, with work specifics intact. A personal bank may hold lessons learned at work, but only after the same sanitizing the skill library gets (`skill-maintenance` §3): no employer, org, product, or customer names, internal repo/host/URL names, workspace/ticket/PR IDs, colleague names, or absolute paths. Keep the lesson, drop the identifiers.
 - **Routing** between skills, overlays, and memory: see `skill-maintenance`.
 - Workers and sub-agents usually have no memory; the orchestrator retains their outcomes.
+
+## Prefer slower over resource-hungry
+
+Always accept slightly worse expected performance rather than over-consuming system resources. One workspace or package at a time instead of the whole repo; explicit files instead of `.`; sequential or low-concurrency (`--concurrency=2`) instead of fan-out; never raise a heap limit to make a whole-repo run fit. A slow run finishes and can be backgrounded; an over-subscribed one (a 50-process turbo build, an 18 GB type-aware lint) hangs the machine and costs more than the time it was meant to save. If a tool's default is the whole-repo mode, scope it down before running it.
