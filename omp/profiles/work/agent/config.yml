@@ -1,6 +1,5 @@
 modelRoles:
-  default: anthropic/claude-fable-5-1:medium
-  plan: anthropic/claude-fable-5-1:max
+  plan: anthropic/claude-fable-5-2:max
   slow: openai/gpt-6.1-sol:max
   task: openai/gpt-6.1-sol:max
   smol: anthropic/claude-haiku-4-5
@@ -11,6 +10,7 @@ modelRoles:
   memory: "@smol"
   widget: "@smol"
   judge: anthropic/claude-sonnet-5-5
+  default: anthropic/claude-fable-5-2:high
 task:
   agentModelOverrides:
     scout: anthropic/claude-sonnet-5-5:low
