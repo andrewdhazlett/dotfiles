@@ -1,4 +1,5 @@
-# Hindsight memory servers for omp (see omp/agent/config.yml and the work profile).
+# Hindsight memory servers for omp (see omp/agent/config.yml and the work profile),
+# plus one shared context7 MCP server so each agent session needn't spawn its own.
 #   docker compose -f hindsight/compose.yml up -d
 # Data, the ChatGPT login, and Postgres live in the external volumes below, not here.
 # First-time ChatGPT login (personal): run `hindsight-admin chatgpt login` in a container
@@ -46,6 +47,16 @@ services:
       # Key read from a file at start so it never appears in `docker inspect`.
       - ${HOME}/.local/share/work-keys/hindsight-openai:/run/secrets/openai-key:ro
     entrypoint: ["sh", "-c", 'HINDSIGHT_API_LLM_API_KEY="$$(tr -d "\n" < /run/secrets/openai-key)" exec /app/start-all.sh']
+
+  # Shared context7 MCP (streamable HTTP) at http://127.0.0.1:37007/mcp. Holds no key:
+  # each client sends its own `Authorization: Bearer <CONTEXT7_API_KEY>`.
+  context7:
+    image: node:24-alpine
+    container_name: context7-mcp
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:37007:37007
+    command: ["npx", "-y", "@upstash/context7-mcp@4.7.0", "--transport", "http", "--port", "37007"]
 
 volumes:
   hindsight-data:
