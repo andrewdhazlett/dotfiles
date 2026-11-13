@@ -31,6 +31,8 @@ theme:
 symbolPreset: nerd
 composer:
   shape: band
-setupVersion: 2
+setupVersion: 3
 dev:
   autoqaConsent: denied
+update:
+  auto: false
