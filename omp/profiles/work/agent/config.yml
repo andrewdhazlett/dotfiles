@@ -36,3 +36,10 @@ dev:
   autoqaConsent: denied
 update:
   auto: false
+bash:
+  autoBackground:
+    thresholdMs: 10000
+eval:
+  autoBackground:
+    thresholdMs: 10000
+    enabled: true

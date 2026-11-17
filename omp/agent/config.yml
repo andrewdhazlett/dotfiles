@@ -37,3 +37,10 @@ composer:
   shape: band
 dev:
   autoqaConsent: denied
+bash:
+  autoBackground:
+    thresholdMs: 10000
+eval:
+  autoBackground:
+    thresholdMs: 10000
+    enabled: true
