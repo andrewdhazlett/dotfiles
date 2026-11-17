@@ -37,6 +37,12 @@ echo "linking omp config"
 mkdir -p ~/.omp/agent ~/.omp/profiles/work/agent
 ln -s $DIR/omp/agent/config.yml ~/.omp/agent
 ln -s $DIR/omp/profiles/work/agent/config.yml $DIR/omp/profiles/work/agent/models.yml ~/.omp/profiles/work/agent
+# link omp hooks into both profiles; omp only discovers hooks under hooks/pre
+# or hooks/post, never directly in hooks/
+for agent in ~/.omp/agent ~/.omp/profiles/work/agent; do
+  mkdir -p $agent/hooks/pre
+  ln -s $DIR/omp/hooks/pre/no-foreground-polling.ts $agent/hooks/pre
+done
 
 # link omo (OmO Native) config; runtime state (auth, sessions, caches) stays local.
 # default agent dir = personal subscription logins; the work profile
